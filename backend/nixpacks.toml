@@ -1,0 +1,11 @@
+[phases.setup]
+nixpkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm install --prefix backend"]
+
+[phases.build]
+cmds = ["npm run build --prefix backend"]
+
+[start]
+command = "node backend/dist/index.js"
