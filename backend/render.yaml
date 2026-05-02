@@ -16,6 +16,10 @@ services:
         value: admin123
       - key: DATABASE_PATH
         value: /data/quotation.db
+      - key: H5_BASE_URL
+        fromService:
+          name: quotation-frontend
+          envVarKey: APP_URL
     disk:
       name: data
       mountPath: /data

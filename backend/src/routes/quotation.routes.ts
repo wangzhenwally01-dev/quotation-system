@@ -149,7 +149,7 @@ router.post('/:id/publish', (req: AuthRequest, res) => {
 
 router.post('/:id/regenerate', async (req: AuthRequest, res: Response) => {
   const db = getDb();
-  const { style } = req.body || {};
+  const { style, scheme_type } = req.body || {};
   const quotation = db.prepare('SELECT * FROM quotations WHERE id = ? AND admin_id = ?').get(req.params.id, req.adminId) as any;
   if (!quotation) {
     res.status(404).json({ error: '报价单不存在' });

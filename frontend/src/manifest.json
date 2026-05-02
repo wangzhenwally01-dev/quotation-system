@@ -9,7 +9,7 @@
     "title": "服务报价方案",
     "router": {
       "mode": "history",
-      "base": "/"
+      "base": "/quotation-system/"
     },
     "devServer": {
       "port": 5173

@@ -18,6 +18,7 @@ function h5QuotationRewrite(): Plugin {
 
 export default defineConfig({
   plugins: [uni(), h5QuotationRewrite()],
+  base: process.env.NODE_ENV === 'production' ? '/quotation-system/' : '/',
   server: {
     port: 5173,
     proxy: {
